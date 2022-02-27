@@ -1,7 +1,5 @@
 import 'dart:io';
-
-void main() {
-  /*
+/*
     Challenge 3 - Decision making
     #1 If Else dan Ternary
     Sistem penilaian hasil belajar (0-100)
@@ -21,6 +19,8 @@ void main() {
       # E : Sangar Kurang
       # Other : nilai Invalid
   */
+
+void main() {
   int angka = 20;
   ifelse(angka);
   int nilai = 65;

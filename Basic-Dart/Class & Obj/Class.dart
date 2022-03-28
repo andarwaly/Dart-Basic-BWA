@@ -37,6 +37,14 @@ void main() {
       namaPemilik: 'Dina Wardani', namaBank: 'BLU', totalSaldo: 200000000);
   rekeningDina.setSaldo = 500000000;
   rekeningDina.cekSaldo();
+  print('--------------------------');
+
+  RekeningBank rekeningMulti =
+      new RekeningBank.owo(namaPemilik: 'Dzaky Waly', totalSaldo: 900000000);
+
+  rekeningMulti.cekSaldo();
+  print(rekeningMulti.getBank);
+  print('--------------------------');
 }
 
 class RekeningBank {
@@ -52,10 +60,15 @@ class RekeningBank {
     return totalSaldo;
   }
 
+  String? get getBank => namaBank;
+
   RekeningBank(
       {this.namaPemilik,
       this.namaBank,
       this.totalSaldo}); //ini adalah constructor
+
+  //bisa set multiple constructor
+  RekeningBank.owo({this.namaPemilik, this.namaBank = 'owo', this.totalSaldo});
 
   cekSaldo() {
     print('Jumlah saldo anda saat ini = $totalSaldo');
